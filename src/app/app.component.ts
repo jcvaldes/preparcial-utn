@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Country } from './models/country.interface';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'preparcial';
+  countries: Country[] = [];
+  regionChanged(evt) {
+    this.countries = evt;
+  }
 }
